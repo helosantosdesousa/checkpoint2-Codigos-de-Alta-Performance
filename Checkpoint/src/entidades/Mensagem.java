@@ -1,19 +1,27 @@
 package entidades;
 
+import java.util.Scanner;
+
 public class Mensagem {
-    String nome, email, telefone;
-    int contato;
+    String nome, contato;
+    int motivo;
    String mensagem;
 
-    public Mensagem() {
+    public Mensagem(String nome, String contato, int motivo, String mensagem) {
         this.nome = nome;
-        this.email =  email;
-        this.telefone = telefone;
         this.contato = contato;
+        this.motivo = motivo;
         this.mensagem = mensagem;
     }
-    
+
     //getters e setters
+
+    public void setContato(String contato){
+        this.contato = contato;
+    }
+    public String getContato(){
+        return contato;
+    }
     public String getMensagem() {
         return mensagem;
     }
@@ -22,29 +30,14 @@ public class Mensagem {
         this.mensagem = mensagem;
     }
 
-    public int getContato() {
-        return contato;
+    public int getMotivo() {
+        return motivo;
     }
 
-    public void setContato(int contato) {
-        this.contato = contato;
+    public void setMotivo(int motivo) {
+        this.motivo = motivo;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getNome() {
         return nome;

@@ -1,11 +1,9 @@
 package entidades;
 
-import java.util.Scanner;
-
 public class Mensagem {
     String nome, contato;
     int motivo;
-   String mensagem;
+    String mensagem;
 
     public Mensagem(String nome, String contato, int motivo, String mensagem) {
         this.nome = nome;
@@ -14,7 +12,6 @@ public class Mensagem {
         this.mensagem = mensagem;
     }
 
-    //getters e setters
 
     public void setContato(String contato){
         this.contato = contato;

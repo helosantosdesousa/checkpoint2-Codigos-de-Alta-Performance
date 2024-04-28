@@ -39,14 +39,15 @@ public class AtendimentoMensagens {
                     int tipoAtendimento = 0;
                     System.out.println("Deseja atender fila Sugestão (1) ou fila Reclamação (2)? ");
                     tipoAtendimento = e.nextInt();
-                    System.out.println("Mensagem: " + mensagem);
 
                     if (tipoAtendimento == 1 && !filaSugestao.isEmpty()) {
                         m = filaSugestao.first();
+                        System.out.println("Mensagem: " + m.getMensagem()); // Print the message from 'm'
                         filaSugestao.verificaDisponibilidade(filaResolucao, m);
                         filaSugestao.dequeue();
                     } else if (tipoAtendimento == 2 && !filaReclamacao.isEmpty()) {
                         m = filaReclamacao.first();
+                        System.out.println("Mensagem: " + m.getMensagem()); // Print the message from 'm'
                         filaReclamacao.verificaDisponibilidade(filaResolucao, m);
                         filaReclamacao.dequeue();
                     } else if (filaSugestao.isEmpty() || filaReclamacao.isEmpty()) {
@@ -55,6 +56,7 @@ public class AtendimentoMensagens {
                         System.out.println("Inválido!");
                     }
                     break;
+
                 case 3:
                     if (filaResolucao.isEmpty()) {
                         System.out.println("Fila vazia");
